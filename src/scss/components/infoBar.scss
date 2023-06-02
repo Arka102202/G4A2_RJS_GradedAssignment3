@@ -1,0 +1,15 @@
+.info-bar {
+    position: fixed;
+    right: 0;
+
+    background: var(--primary-color);
+
+    color: #232323;
+
+    padding: 1rem;
+    //   border-top-left-radius: 1rem;
+    border-bottom-left-radius: 1rem;
+    border-right: 3px solid #dc2f02;
+
+    z-index: 10;
+}

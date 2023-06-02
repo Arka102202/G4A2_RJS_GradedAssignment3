@@ -1,0 +1,97 @@
+.card-movie {
+    display: grid;
+    grid-template-rows: 22.5rem 7.5rem;
+
+    max-width: 15rem;
+    min-width: 15rem;
+    height: 30rem;
+
+    margin: 1rem 0.8rem;
+    position: relative;
+
+    overflow: hidden;
+
+    border-radius: 1rem;
+
+    background-color: #d3d3d3;
+
+    box-shadow: 0 0 3px 2px #23232377;
+    @include transition;
+
+    &:hover {
+        transform: scale(1.05);
+        box-shadow: 0 0 5px 2px #2323233f;
+        cursor: pointer;
+    }
+
+    & button {
+        position: absolute;
+        top: 1rem;
+        right: 1rem;
+
+        z-index: 1;
+
+        @include transition;
+
+        &:hover {
+            box-shadow: none;
+            transform: scale(1.2);
+        }
+
+        & .fi-sr-heart {
+            text-shadow: 0 0 1rem #ff9696;
+        }
+    }
+
+    &__loading {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        z-index: 2;
+        background: #1a1a1a66;
+        top: 0;
+        left: 0;
+        width: 15rem;
+        height: 22.5rem;
+
+        & .fi-br-slash {
+            color: #d3d3d3;
+            animation: rotate 1s linear infinite;
+            // transform-origin: bottom;
+
+            @keyframes rotate {
+                0% {
+                    transform: rotate(0deg);
+                }
+
+                100% {
+                    transform: rotate(360deg);
+                }
+            }
+        }
+    }
+
+    &__img img {
+        height: 100%;
+    }
+
+    &__info {
+        padding: 0.5rem 1rem;
+        display: grid;
+        grid-template-rows: 1.2fr 1fr;
+
+        &__extra {
+            @include flex-space-btw-c;
+            margin-top: 0.3rem;
+        }
+
+        &__rating {
+            @include flex-space-btw-c;
+            width: 6rem;
+            background-color: rgb(31 31 31);
+            padding: 2px 1rem;
+            border-radius: 9rem;
+        }
+    }
+}

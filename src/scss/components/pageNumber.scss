@@ -1,0 +1,55 @@
+.page-number {
+    @include flex-cc;
+
+    width: 100vw;
+
+    margin: 5rem 0;
+    margin-bottom: 1rem;
+
+    @media (max-width: 37.5em) {
+        gap: 20px;
+    }
+
+    @media (max-width: 30em) {
+        gap: 2.5px;
+    }
+
+    & .btn-square {
+        color: var(--primary-accent);
+    }
+
+    & .btn-img {
+        width: 5rem;
+    }
+
+    @media (max-width: 43.75em) {
+        margin-left: 0 !important;
+    }
+}
+
+.page-numbers-marked {
+    @include flex-cc;
+
+    @media (max-width: 55em) {
+        display: none;
+    }
+}
+
+.page-number-box {
+
+    display: none;
+
+    @media (max-width: 55em) {
+        @include flex-cc;
+    }
+
+    & .curr-page-no {
+        color: var(--primary-color);
+    }
+
+    & p {
+        color: var(--primary-accent);
+        @include h3;
+        padding: 10px;
+    }
+}

@@ -1,0 +1,65 @@
+.home {
+    width: 100vw;
+    height: 100vh;
+    --background-overlay: linear-gradient(0deg,
+            rgba(0, 0, 0, 0.3) 0%,
+            rgba(0, 0, 0, 0.6) 100%);
+
+    background: var(--background-overlay), url("../../assets/img/362-copy.webp");
+    background-size: cover;
+    background-position: center;
+
+    overflow: hidden auto;
+
+    color: var(--primary-color);
+
+    @media (max-height: 45em) {
+        background: var(--background-overlay),
+            url("../../assets/img/362-copy-1.7.webp");
+        background-size: cover;
+        background-position: center;
+    }
+}
+
+main {
+    @include flex-col-cc;
+    gap: 3rem;
+
+    width: calc(100% - 4rem);
+
+    margin: 10rem 2rem;
+}
+
+.home__title {
+    background: var(--signature-gradient);
+
+    background-clip: text;
+    color: transparent;
+    display: inline-block;
+}
+
+.p-box {
+    @include flex-col-cc;
+    gap: 0.5rem;
+
+    max-width: 70rem;
+    text-align: center;
+
+    backdrop-filter: blur(1rem);
+
+    letter-spacing: 1.2px !important;
+}
+
+.input-box {
+    @include flex-col-cc;
+
+    & label h3 {
+        backdrop-filter: blur(1rem);
+    }
+}
+
+.input-btn {
+    margin-top: 2rem;
+    @include flex-cc;
+    gap: 1rem;
+}

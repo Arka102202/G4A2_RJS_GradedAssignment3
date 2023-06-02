@@ -1,0 +1,90 @@
+.drop-down {
+    opacity: 1 !important;
+    pointer-events: all !important;
+    background-color: darken($color: rgba(57, 57, 57), $amount: 5);
+    transform: translateY(110%);
+    border-top: 1px solid #fff;
+    z-index: 1;
+}
+
+header {
+    width: 100%;
+    @include flex-space-btw-c;
+
+    position: fixed;
+    top: 0;
+    z-index: 2;
+    color: var(--primary-color);
+    background-color: darken($color: rgba(57, 57, 57), $amount: 5);
+
+    & .logo-title {
+        flex: 0 1 auto;
+    }
+
+    nav {
+        @include flex-space-btw-c;
+
+        gap: 1rem;
+        margin-right: 3rem;
+        position: relative;
+
+        .nav-links {
+            @include flex-space-btw-c;
+            justify-content: space-around;
+            gap: 1rem;
+            @include transition;
+
+            @media (max-width: 37.5em) {
+                // display: none;
+                opacity: 0;
+                pointer-events: none;
+                left: 0;
+                width: 100vw;
+                position: fixed;
+                z-index: 1;
+            }
+        }
+
+        .nav-links-btn {
+            display: none;
+
+            @media (max-width: 37.5em) {
+                display: block;
+            }
+        }
+
+        .nav-link {
+            padding: 1rem;
+        }
+
+        & button {
+            padding: 1rem;
+        }
+    }
+}
+
+.search-bar {
+    width: 100%;
+    @include flex-cc;
+    z-index: 2;
+
+    position: fixed;
+
+    transition: all 0.3s;
+
+    background-color: #fff;
+
+    & input {
+        flex: 1 1 auto;
+        background-color: #fff;
+    }
+
+    & button {
+        @include flex-cc;
+    }
+}
+
+.hidden {
+    display: none;
+    transform: translateY(-100%);
+}

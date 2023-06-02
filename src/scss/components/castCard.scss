@@ -1,0 +1,53 @@
+.card-cast {
+    min-width: 13rem;
+    max-width: 13rem;
+    height: 25rem;
+
+    position: relative;
+
+    display: grid;
+    align-items: end;
+
+    grid-template-rows: 19.5rem 4.7rem;
+
+
+    margin: 0.5rem;
+
+    border-radius: 1rem;
+    overflow: hidden;
+
+    background-color: #d3d3d3;
+
+    &__info {
+        padding: 0.8rem;
+    }
+
+    &__loading {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        z-index: 2;
+        background: #1a1a1a66;
+        top: 0;
+        left: 0;
+        width: 13rem;
+        height: 19.5rem;
+
+        & .fi-br-slash {
+            color: #d3d3d3;
+            animation: rotate 1s linear infinite;
+            // transform-origin: bottom;
+
+            @keyframes rotate {
+                0% {
+                    transform: rotate(0deg);
+                }
+
+                100% {
+                    transform: rotate(360deg);
+                }
+            }
+        }
+    }
+}

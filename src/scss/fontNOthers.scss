@@ -1,0 +1,138 @@
+@import url("https://fonts.googleapis.com/css2?family=Signika+Negative:wght@400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600;700;800&display=swap");
+
+@mixin h1 {
+    font-size: 5rem;
+    font-family: "Signika Negative", sans-serif;
+    letter-spacing: 1px;
+}
+
+@mixin h2 {
+    @include h1;
+    font-size: 3.2rem;
+}
+
+h1,
+h2,
+h3,
+label,
+select,
+input[type="date"],
+.filter input[type="text"] {
+    color: var(--primary-color);
+}
+
+h1 {
+    @include h1;
+}
+
+h2 {
+    @include h2;
+}
+
+@mixin h3 {
+    font-size: 2.4rem;
+    font-family: "Signika Negative", sans-serif;
+    // letter-spacing: 2px;
+}
+
+h3 {
+    @include h3;
+}
+
+@mixin h4 {
+    font-size: 1.8rem;
+    font-family: "Signika Negative", sans-serif;
+    // letter-spacing: 1px;
+}
+
+@mixin placeholder {
+    @include h4;
+    font-family: "Rubik", sans-serif;
+}
+
+h4 {
+    @include h4;
+}
+
+@mixin p {
+    font-size: 1.4rem;
+    font-family: "Rubik", sans-serif;
+    // letter-spacing: 1.2px;
+    line-height: 1.3;
+}
+
+p,
+select,
+.filter input[type="text"] {
+    @include p;
+}
+
+select,
+.filter input[type="text"] {
+    letter-spacing: 0.5px;
+}
+
+.fi-sr-heart {
+    font-size: 2.5rem;
+}
+
+.card-movie__info {
+    & h4 {
+        font-size: 1.4rem;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 2;
+        white-space: pre-wrap;
+    }
+
+    & span {
+        font-size: 1.5rem;
+        font-weight: 700;
+    }
+
+    & strong,
+    .fi-rs-star {
+        font-size: 1.6rem;
+    }
+
+    & strong h4 {
+        font-size: 1.6rem;
+    }
+}
+
+.card-cast__info h4,
+.card-cast__info p {
+    font-size: 1.4rem;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1;
+    white-space: pre-wrap;
+}
+
+nav button,
+.search-bar button {
+    font-size: 2rem;
+}
+
+.fi-rr-angle-small-right,
+.fi-sr-arrow-right {
+    font-size: 3rem;
+
+    @media (max-width: 25em) {
+        font-size: 5rem;
+
+    }
+}
+
+.page-number .btn-square {
+    font-size: 2rem;
+}
+
+.fi-br-slash {
+    font-size: 5rem;
+}

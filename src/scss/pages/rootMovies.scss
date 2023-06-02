@@ -1,0 +1,16 @@
+.movies-root {
+    @include flex-col-ss;
+    background-color: #2323239d;
+
+    min-height: 100vh;
+
+    background: url("../../assets/img/movieList-bg-2.webp");
+    background-size: 10%;
+    overflow: hidden;
+
+    &__outlet {
+        @include grid-cc;
+        margin: 2vw auto;
+        margin-bottom: 0;
+    }
+}

@@ -1,0 +1,123 @@
+aside {
+    @include flex-col-ss;
+    gap: 2rem;
+
+    max-width: fit-content;
+    padding: 2rem;
+    margin-bottom: 2rem;
+
+    position: fixed;
+    left: 0;
+
+    backdrop-filter: blur(10px);
+    overflow: hidden auto;
+
+    @include transition;
+
+    @media (max-width: 37.5em) {
+        left: 0;
+        transform: translateY(-130%);
+        opacity: 0;
+        z-index: 5;
+
+        padding: 2rem;
+        background-color: rgba(73, 73, 73, 0.5);
+        min-width: 100vw;
+        margin: 0 !important;
+        @include flex-col-ss;
+    }
+
+    & h3 {
+        margin-right: 3rem;
+
+        font-size: 2.4rem;
+
+        @media (max-width: 37.5em) {
+            font-size: 3rem;
+        }
+    }
+
+    & .filter,
+    & .sort {
+        @include flex-col-ss;
+        gap: 2rem;
+
+        & label {
+            @include h4;
+            font-size: 1.8rem;
+
+            @media (max-width: 37.5em) {
+                font-size: 2rem;
+            }
+        }
+
+        & h4 {
+            font-size: 1.4rem;
+            font-weight: 400;
+
+            @media (max-width: 37.5em) {
+                font-size: 1.8rem;
+            }
+        }
+
+        & input,
+        & select {
+
+            font-size: 1.4rem;
+
+            @media (max-width: 37.5em) {
+                width: calc(100vw - 4rem);
+                font-size: 1.6rem;
+            }
+        }
+    }
+
+    & .filter p {
+        color: #dc2f02;
+        font-weight: 600;
+    }
+
+    & button {
+        background: #494949;
+        color: var(--primary-color);
+    }
+}
+
+.add-genre-items {
+    max-height: 20rem;
+    overflow: hidden auto;
+
+    @media (max-width: 37.5em) {
+        @include flex-sc;
+        flex-wrap: wrap
+    }
+}
+
+.add-genre-item {
+    @include flex-space-btw-c;
+    gap: 3rem;
+
+    background: #494949;
+    border-radius: 10rem;
+    padding: 5px 10px;
+    margin: 1rem 0;
+
+    & img {
+        width: 2.4rem;
+    }
+}
+
+.selected-genres {
+    @include flex-col-ss;
+}
+
+.filter h4 {
+    color: var(--primary-color);
+    font-size: 1.2rem;
+}
+
+
+.slide-aside {
+    transform: translateY(0%);
+    opacity: 1;
+}
