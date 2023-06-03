@@ -62,12 +62,11 @@ aside {
 
         & input,
         & select {
-
             font-size: 1.4rem;
 
             @media (max-width: 37.5em) {
-                width: calc(100vw - 4rem);
-                font-size: 1.6rem;
+                width: calc(100vw - 7rem) !important;
+                font-size: 1.6rem !important;
             }
         }
     }

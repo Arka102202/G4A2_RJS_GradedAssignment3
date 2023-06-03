@@ -69,29 +69,20 @@ input[type="number"] {
     box-shadow: inset 0 0 0 3px var(--focus-color);
 }
 
-/* For WebKit-based browsers (Chrome, Safari) */
+
 ::-webkit-scrollbar {
     width: 10px;
-    /* Adjust the width as desired */
     background-color: #f1f1f1;
-
     border-radius: 5px;
-    /* Background color of the scrollbar track */
-
 }
 
 ::-webkit-scrollbar-thumb {
     background-color: #888;
-    /* Color of the scrollbar thumb */
     border-radius: 5px;
-    /* Rounded corners of the thumb */
-
-    // transition: all .3s;
 }
 
 ::-webkit-scrollbar-thumb:hover {
     background-color: #555;
-    /* Color of the thumb on hover */
 }
 
 input[type="text"] {
@@ -106,7 +97,6 @@ input[type="text"] {
 
     @include transition;
 
-    // font
     @include placeholder;
 
     &::placeholder {

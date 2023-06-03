@@ -47,9 +47,9 @@ const SortNFilter = () => {
   const { pathname } = location;
   const loc = location.pathname.split("/");
 
-  window.addEventListener("resize", () => {
-    setInnerWidth(window.innerWidth);
-  });
+  window.addEventListener("resize", () => setInnerWidth(window.innerWidth));
+
+  const changeWidth = () => setInnerWidth(window.innerWidth);
 
   useEffect(() => {
     if (searchKeyRef.current) {
@@ -153,6 +153,7 @@ const SortNFilter = () => {
       style={{ top, height: `calc(100vh - ${parseInt(top) + 120 + "px"})` }}
       ref={asideRef}
       onClick={asideClickHandler}
+      onResize={changeWidth}
     >
       <h3>Filter and Sort</h3>
       {loc.length < 4 && (
